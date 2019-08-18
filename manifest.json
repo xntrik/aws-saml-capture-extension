@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "AWS SAML Capture",
+  "version": "0.1",
+  "description": "This extension, if enabled, will capture the SAMLResponse field that is used as part of an IdP initiated authentication flow to AWS.",
+  "browser_action": {
+    "default_icon": "icon-disabled.png",
+    "default_title": "AWS SAML Capture - Disabled"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "clipboardWrite",
+    "webRequest",
+    "https://signin.aws.amazon.com/saml",
+    "storage"
+  ]
+}
